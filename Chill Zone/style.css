@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    background: #555;
+}
+
+/*NAVBAR RESPONSIVA*/
+nav{
+    background-color: #212121;
+}
+nav ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration:  none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+nav a:hover{
+    background-color: rgba(255, 196, 0, 0.699);
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #212121;
+    box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+.box{
+    height: 600px;
+    align-content: center;
+
+}
+
+.container{
+    height: 600px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*POMODORO TIMER*/
+.title{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #FAFAFA;
+    font-weight: 900;
+}
+.timer{
+    font-size: 72px;
+    color: #FAFAFA;
+}
+.btn-timer{
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: white;
+    transition: .3s ease-in-out;
+}
+
+/*Botões pomodoro timer*/
+#start{
+    background-color: #ebae06;
+}
+#start:hover{
+    background-color: #0a0a0abd;
+}
+#stop{
+    background-color: #000000;
+}
+#stop:hover{
+    background-color: #e09b05ad;
+}
+#reset{
+    background-color: #000000;
+}
+#reset:hover{
+    background-color: #e09b05ad;
+}
+
+/*PLAYERS*/
+.player{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+}
+.wrapper{
+    border: 3px solid #e09b05;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 5px;
+}   
+
+/*VOLUME SLIDER*/
+.slider_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.volume_slider{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #e09b05;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.volume_slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #e09b05;
+    border: solid #ffffff;
+    cursor: pointer;
+    border-radius: 100%;
+}
+.volume_slider:hover{
+    opacity: 1.0;
+}
+.volume_slider{
+    width: 100%;
+}
+
+/*RESPONSIVIDADE*/
+@media(max-width: 500px){
+    .container{
+        display: flex;
+        flex-direction: column;
+       
+    }
+}
+@media(max-width: 900px){
+    .box{
+        height: 600px;
+        align-content: center;
+        display: flex;
+        justify-content: space-around;
+    }
+}
